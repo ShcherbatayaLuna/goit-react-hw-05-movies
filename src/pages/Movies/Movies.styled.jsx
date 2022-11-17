@@ -2,16 +2,18 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Section = styled.section`
-  padding: 30px 15px;
+  padding: 30px 0;
   margin-left: auto;
   margin-right: auto;
 `;
 
 export const List = styled.ul`
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
 `;
 
 export const Form = styled.form`
@@ -76,14 +78,21 @@ export const Link = styled(NavLink)`
   text-decoration: none;
 `;
 
+export const TitleBox = styled.div`
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+`;
+
 export const Title = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 1;
-
-  text-align: center;
 
   color: black;
 `;

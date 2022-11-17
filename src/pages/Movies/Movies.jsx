@@ -11,6 +11,7 @@ import {
   Button,
   Loader,
   Link,
+  TitleBox,
   Title,
 } from './Movies.styled';
 
@@ -82,11 +83,14 @@ export default function Movies() {
               <li key={id}>
                 <Link to={`/movies/${id}`} state={{ from: location }}>
                   <img
-                    width="500"
+                    width="290"
+                    height='434'
                     src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
                     alt={title}
                   />
+                  <TitleBox>
                   <Title>{title}</Title>
+                </TitleBox>
                 </Link>
               </li>
             );
