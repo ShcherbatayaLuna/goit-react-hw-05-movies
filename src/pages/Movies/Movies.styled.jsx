@@ -59,8 +59,7 @@ export const Button = styled.button`
   color: black;
   background-color: #f89999;
 
-  :hover,
-  :focus {
+  :hover {
     color: #f89999;
     background-color: black;
     cursor: pointer;
