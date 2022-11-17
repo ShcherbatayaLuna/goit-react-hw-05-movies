@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CastMovieApi } from '../../utils/MovieApi';
+import { List, ListItem, Image, BoxText, Title, Character } from './Cast.styled';
 
 export default function Cast() {
   const [cast, setCast] = useState([]);
@@ -13,11 +14,12 @@ export default function Cast() {
   }, [movieId]);
 
   return (
-    <ul>
+    <List>
       {cast.length > 0 &&
         cast.map(({ id, character, name, profile_path }) => (
-          <li key={id}>
-            <img
+          <ListItem key={id}>
+            <Image
+              width="120"
               src={
                 profile_path
                   ? `https://image.tmdb.org/t/p/w500/${profile_path}`
@@ -25,10 +27,12 @@ export default function Cast() {
               }
               alt={character}
             />
-            <h2>{name}</h2>
-            <p>Character: {character}</p>
-          </li>
+            <BoxText>
+              <Title>{name}</Title>
+              <Character>Character: {character}</Character>
+            </BoxText>
+          </ListItem>
         ))}
-    </ul>
+    </List>
   );
 }
